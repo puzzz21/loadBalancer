@@ -1,0 +1,12 @@
+{
+    "name": "nitv/loadbalancer",
+    "authors": [
+        {
+            "name": "pujaMaharjan",
+            "email": "puja.maharjan@newitventure.com"
+        }
+    ],
+    "require": {
+        "geoip2/geoip2": "0.5.*"
+    }
+}
