@@ -5,13 +5,11 @@ namespace Nitv\LoadBalancer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
-use Nitv\LoadBalancer\GeoBalancerController;
 
 class LoadBalancingController extends Controller
 {
     public function loadBalance()
     {
-        ini_set('memory_limit', '-1');
         $balancer = new GeoBalancerController();
         $balancer->setDefaultServer('usa.example.com');
         $balancer->setRegionServer(['JP', 'KR'], 'asia.example.com');
