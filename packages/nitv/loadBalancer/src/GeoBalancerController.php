@@ -2,8 +2,7 @@
 
 namespace Nitv\LoadBalancer;
 
-require_once 'Nitv\LoadBalancer\geoip2.phar';
-require_once 'Nitv\LoadBalancer\GeoLite2-City.mmdb';
+require_once 'geoip2.phar';
 
 use App\Http\Controllers\Controller;
 use GeoIp2\Database\Reader;
@@ -12,7 +11,7 @@ use League\Flysystem\Exception;
 
 class GeoBalancerController extends Controller
 {
-    public function __construct($geoLiteCityPath = 'GeoLite2-City.mmdb')
+    public function __construct($geoLiteCityPath = '../packages/nitv/loadBalancer/src/GeoLite2-City.mmdb')
     {
         $this->reader = new Reader($geoLiteCityPath);
         $this->regionToServerMap = array();
@@ -27,6 +26,7 @@ class GeoBalancerController extends Controller
     public function setRegionServer()
     {
         $numArguments = func_num_args();
+        $subRegion = '';
         if ($numArguments == 2) {
             $root = NULL;
             $regions = func_get_arg(0);
