@@ -1,5 +1,5 @@
 {
-    "name": "puzzz21/loadbalancer",
+    "name": "puzzz21/loadBalancer",
     "description": "The load balancing package for laravel",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
