@@ -30,7 +30,7 @@ class GeoBalancerController extends Controller
         $server_url = explode('/', $full_url[1]);
         unset($server_url[0]);
         $url = implode('/', $server_url);
-        $this->setDefaultServer('103.213.31.49');
+        $this->setDefaultServer('abc.default.com');
         $stream_url = $this->getVideoLink($userIp, $full_url[0], $url, $port);
         return $stream_url;
     }
