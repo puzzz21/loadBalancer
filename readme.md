@@ -8,7 +8,7 @@ After the installation, you would be able to see puzzz21 folder inside vendor fo
 Now you would be able to implement this package in your project. Here is the example:
 <?php
 
-<center>
+<center><code>
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -26,7 +26,7 @@ class TestController extends Controller
         return $url;
     }
 }
-</center>
+</code></center>
 
 Notice: here, GeoBalancerController takes instance of RegionServer Model as an argument.
 
