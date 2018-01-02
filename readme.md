@@ -27,13 +27,14 @@ class TestController extends Controller
     {
 
         $balancer = new GeoBalancerController(new RegionServer());
-        $url = $balancer->getUrl('http://example.com');
+        $balancer->setDefaultServer('abc.default.com');
+        $url = $balancer->getUrl('http://abc.example.com');
         return $url;
     }
 }
 </pre></code></center>
 
-Notice: here, GeoBalancerController takes instance of RegionServer Model as an argument and getUrl function takes the stream url.
+Notice: here, GeoBalancerController takes instance of RegionServer Model as an argument. Similarly, setDefaultServer takes the default server url and getUrl function takes the stream url.
 
 
   
