@@ -23,13 +23,13 @@ class TestController extends Controller
     {
 
         $balancer = new GeoBalancerController(new RegionServer());
-        $url = $balancer->getUrl('http://103.213.31.49/vodstream/stb/720p/indo/VODStudentOfTheYear2012.mp4/playlist.m3u8');
+        $url = $balancer->getUrl('http://example.com');
         return $url;
     }
 }
 </pre></code></center>
 
-Notice: here, GeoBalancerController takes instance of RegionServer Model as an argument.
+Notice: here, GeoBalancerController takes instance of RegionServer Model as an argument and getUrl function takes the stream url.
 
 
   
