@@ -1,7 +1,8 @@
 Load balancing is used to balance the load through out the avaibale resources. This package implements this concept in laravel.
 So, lets get started!
 To install via composer use the following command:
-<center> <b>composer require puzzz21/loadbalancer</b> <center>
+
+<code><center> <b>composer require puzzz21/loadbalancer</code></b> <center>
   
 After the installation, you would be able to see puzzz21 folder inside vendor folder. Then copy the file /vendor/puzzz21/loadbalancer/packages/nitv/loadBalancer/src/region_servers.sql in your database. You could also create the table with similar name and columns. With the completion of table creation, you need to create a model App\RegionServer for the table region_servers.
 
