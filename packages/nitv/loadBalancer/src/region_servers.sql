@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `ntapp_region_servers`
 --
 
-CREATE TABLE `ntapp_region_servers` (
+CREATE TABLE `region_servers` (
   `id` int(11) NOT NULL,
   `country` varchar(2),
   `region` varchar(2) DEFAULT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `ntapp_region_servers` (
 -- Dumping data for table `ntapp_region_servers`
 --
 
-INSERT INTO `ntapp_region_servers` (`id`, `country`, `region`, `server_url`, `created_at`, `updated_at`) VALUES
+INSERT INTO `region_servers` (`id`, `country`, `region`, `server_url`, `created_at`, `updated_at`) VALUES
 (4, 'JP', '', 'asia.example.com', '2017-12-27 06:07:12', '2017-12-27 22:50:10'),
 (5, 'KR', 'fd', 'asia.example.com', '2017-12-27 06:07:20', '2017-12-27 22:50:16'),
 (6, 'FR', '', 'europe.example.com', '2017-12-27 06:07:29', '2017-12-27 06:07:29'),
@@ -61,7 +61,7 @@ INSERT INTO `ntapp_region_servers` (`id`, `country`, `region`, `server_url`, `cr
 --
 -- Indexes for table `ntapp_region_servers`
 --
-ALTER TABLE `ntapp_region_servers`
+ALTER TABLE `region_servers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -71,7 +71,7 @@ ALTER TABLE `ntapp_region_servers`
 --
 -- AUTO_INCREMENT for table `ntapp_region_servers`
 --
-ALTER TABLE `ntapp_region_servers`
+ALTER TABLE `region_servers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
