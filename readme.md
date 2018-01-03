@@ -5,11 +5,11 @@ To install via composer use the following command:
 
 <code><center> <b>composer require puzzz21/loadbalancer</code></b> <center>
   
-If error is created regarding minimum stability version then add the following code in your root composer.json file.
+If there is an error regarding minimum stability version then add the following code in your root composer.json file.
 
 <code><center>"minimum-stability":"dev"</code></center>
   
-After the installation, you would be able to see puzzz21 folder inside vendor folder. Then copy the file /vendor/puzzz21/loadbalancer/packages/nitv/loadBalancer/src/region_servers.sql in your database. You can also create the table with similar name and columns. With the completion of table creation, you need to create a model App\RegionServer for the table region_servers.
+After the installation, you would be able to see puzzz21 folder inside vendor directory. Then copy the file /vendor/puzzz21/loadbalancer/packages/nitv/loadBalancer/src/region_servers.sql in your database. You can also create the table with similar name and columns. With the completion of table creation, you need to create a model App\RegionServer for the table region_servers.
 
 Now you would be able to implement this package in your project. Here is the example:
 <?php
@@ -18,7 +18,6 @@ Now you would be able to implement this package in your project. Here is the exa
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
 use Nitv\LoadBalancer\GeoBalancerController;
 use App\RegionServer;
 
