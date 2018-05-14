@@ -9,6 +9,7 @@ use GeoIp2\Database\Reader;
 use App\Http\Requests;
 use League\Flysystem\Exception;
 use App\RegionServer as Model;
+
 class GeoBalancerController extends Controller
 {
     public function __construct(Model $model)
@@ -43,7 +44,7 @@ class GeoBalancerController extends Controller
     public function getVideoLink($userIp, $protocol, $relativeMediaPath, $port)
     {
 
-        $geocityPath = "../public/storage/GeoLite2-City.mmdb";
+        $geocityPath = "../packages/nitv/loadBalancer/src/GeoLite2-City.mmdb";
 
         $reader = new Reader($geocityPath);
         if ($port == NULL) {
@@ -87,9 +88,9 @@ class GeoBalancerController extends Controller
             $relativeMediaPath = str_replace($protocol . '://', '/', $relativeMediaPath);
         }
         if ($this->startsWith($dedicatedServer, $protocol . '://')) {
-            $mediaPath = $dedicatedServer . ':' . $port .'/'. $relativeMediaPath;
+            $mediaPath = $dedicatedServer . ':' . $port . '/' . $relativeMediaPath;
         } else {
-            $mediaPath = $protocol . '://' . $dedicatedServer . ':' . $port . '/'. $relativeMediaPath;
+            $mediaPath = $protocol . '://' . $dedicatedServer . ':' . $port . '/' . $relativeMediaPath;
         }
         return $mediaPath;
     }
