@@ -1,4 +1,4 @@
-Load balancing is used to balance the load through out the available resources. This package implements this concept in laravel.
+Load balancing is used to balance the load through out the available resources. This package implements this concept in PHP.
 So, lets get started!
 
 To install via composer use the following command:
@@ -9,7 +9,7 @@ If there is an error regarding minimum stability version then add the following 
 
 <code><center>"minimum-stability":"dev"</code></center>
   
-After the installation, you would be able to see puzzz21 folder inside vendor directory. Then copy the file /vendor/puzzz21/loadbalancer/packages/nitv/loadBalancer/src/region_servers.sql in your database. You can also create the table with similar name and columns. With the completion of table creation, you need to create a model App\RegionServer for the table region_servers.
+After the installation, you would be able to see puzzz21 folder inside vendor directory. Then copy the file packages/nitv/loadBalancer/src/region_servers.sql in your database. You can also create the table with similar name and columns. With the completion of table creation, you need to create a model App\RegionServer for the table region_servers. Then create a folder storage inside public folder of your project, where you should copy packages/nitv/loadBalancer/src/GeoLite2-City.mmdb.
 
 Now you would be able to implement this package in your project. Here is the example:
 <?php
